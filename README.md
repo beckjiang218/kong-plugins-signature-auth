@@ -1,1 +1,1 @@
-# lua-plugins
+# kong-plugins

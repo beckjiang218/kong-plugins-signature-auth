@@ -1,7 +1,7 @@
 package = "signature-auth"
 version = "scm-1"
 source = {
-   url = "git@github.com:beckjiang218/kong-plugins-signature-auth.git"
+   url = "https://github.com/beckjiang218/kong-plugins-signature-auth.git"
 }
 description = {
    homepage = "*** please enter a project homepage ***",
@@ -11,7 +11,8 @@ dependencies = {}
 build = {
    type = "builtin",
    modules = {
-      handler = "src/handler.lua",
-      schema = "src/schema.lua"
+      ["kong.plugins.signature-auth.config"] = "kong/plugins/signature-auth/config.lua",
+      ["kong.plugins.signature-auth.handler"] = "kong/plugins/signature-auth/handler.lua",
+      ["kong.plugins.signature-auth.schema"] = "kong/plugins/signature-auth/schema.lua"
    }
 }
